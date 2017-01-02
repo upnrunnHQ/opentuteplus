@@ -15,10 +15,10 @@ function opentute_comment_nav() {
 	if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) :
 		?>
 	<div class="navigation comment-navigation" role="navigation">
-		<h2 class="screen-reader-text sr-only"><?php _e( 'Comment navigation', 'opentute' ); ?></h2>
+		<h2 class="screen-reader-text sr-only"><?php _e( 'Comment navigation', 'opentuteplus' ); ?></h2>
 		<div class="nav-links">
-			<div class="nav-previous"><?php previous_comments_link( __( 'Older Comments', 'opentute' ) ); ?></div>
-			<div class="nav-next"><?php next_comments_link( __( 'Newer Comments', 'opentute' ) ); ?></div>
+			<div class="nav-previous"><?php previous_comments_link( __( 'Older Comments', 'opentuteplus' ) ); ?></div>
+			<div class="nav-next"><?php next_comments_link( __( 'Newer Comments', 'opentuteplus' ) ); ?></div>
 		</div><!-- .nav-links -->
 	</div><!-- .comment-navigation -->
 	<?php
@@ -33,7 +33,7 @@ if ( ! function_exists( 'opentute_excerpt_more' ) && ! is_admin() ) :
 function opentute_excerpt_more( $more ) {
 	$link = sprintf( '<span class="read-more"><a href="%1$s">%2$s %3$s</a></span>',
 		esc_url( get_permalink( get_the_ID() ) ),
-		__( 'Read More', 'opentute' ),
+		__( 'Read More', 'opentuteplus' ),
 		'<span class="screen-reader-text sr-only">' . get_the_title( get_the_ID() ) . '</span>'
 		);
 	return ' &hellip; ' . $link;
@@ -124,7 +124,7 @@ function opentute_entry_footer() {
 		opentute_entry_tags();
 		
 	// edit_post_link
-		edit_post_link( __( 'Edit', 'opentute' ) . ' <span class="screen-reader-text sr-only">' . get_the_title() . '</span>', '<span class="edit-link">', '</span>' );	
+		edit_post_link( __( 'Edit', 'opentuteplus' ) . ' <span class="screen-reader-text sr-only">' . get_the_title() . '</span>', '<span class="edit-link">', '</span>' );	
 
 	// opentute entry author info
 		opentute_entry_author_info();
@@ -175,9 +175,9 @@ function opentute_entry_attachment_dimensions() {
 		$metadata = wp_get_attachment_metadata();
 		
 		printf( '<span class="meta-dimensions"><span class="meta-dimensions-prep">%1$s </span><a href="%2$s" title="%3$s">%4$s &times; %5$s</a></span>',
-			__( 'Original dimensions', 'opentute' ),
+			__( 'Original dimensions', 'opentuteplus' ),
 			esc_url( wp_get_attachment_url() ),
-			esc_attr( __( 'Link to image', 'opentute' ) ),
+			esc_attr( __( 'Link to image', 'opentuteplus' ) ),
 			$metadata['width'],
 			$metadata['height']
 			);
@@ -192,17 +192,17 @@ if ( ! function_exists( 'opentute_entry_author' ) ) :
 function opentute_entry_author() {
 	if ( is_single() ) {
 		printf( '<span class="meta-author"><span class="author vcard"><span class="meta-author-prep">%1$s </span><a href="%2$s" class="url fn n" title="%3$s">%4$s</a></span></span>',
-			__( 'Author', 'opentute' ),
+			__( 'Author', 'opentuteplus' ),
 			esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
-			sprintf( esc_attr__( 'View all posts by %s', 'opentute' ), get_the_author() ),
+			sprintf( esc_attr__( 'View all posts by %s', 'opentuteplus' ), get_the_author() ),
 			get_the_author()
 			);
 	}
 	else {
 		printf( '<span class="meta-author"><span class="author vcard"><span class="meta-author-prep">%1$s </span><a href="%2$s" class="url fn n" title="%3$s">%4$s</a></span></span>',
-			__( '<span class="meta-title-sparator">by</span>', 'opentute' ),
+			__( '<span class="meta-title-sparator">by</span>', 'opentuteplus' ),
 			esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
-			sprintf( esc_attr__( 'View all posts by %s', 'opentute' ), get_the_author() ),
+			sprintf( esc_attr__( 'View all posts by %s', 'opentuteplus' ), get_the_author() ),
 			get_the_author()
 			);
 	}
@@ -228,7 +228,7 @@ function opentute_entry_author_info() {
 			<p class="author-bio">
 				<?php the_author_meta( 'description' ); ?>
 				<a href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>" class="author-link" rel="author">
-					<?php printf( __( 'View all posts by %s', 'opentute' ), get_the_author() ); ?>
+					<?php printf( __( 'View all posts by %s', 'opentuteplus' ), get_the_author() ); ?>
 				</a>
 			</p>
 		</div><!-- .author-description -->
@@ -247,7 +247,7 @@ function opentute_entry_categories() {
 	$categories_list = get_the_category_list( ', ' );
 	if ( $categories_list ) {
 		printf( '<span class="meta-categories"><span class="meta-categories-prep">%1$s </span>%2$s</span>',
-			__( 'Categories', 'opentute' ),
+			__( 'Categories', 'opentuteplus' ),
 			$categories_list
 			);
 	}
@@ -262,7 +262,7 @@ function opentute_entry_comments() {
 	if ( is_single() ) {
 		if ( comments_open() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) :
 			echo '<span class="meta-comments">';
-		comments_popup_link( __( 'Leave a comment', 'opentute' ), __( '1 Comment', 'opentute' ), __( '% Comments', 'opentute' ), 'meta-comments-link' );
+		comments_popup_link( __( 'Leave a comment', 'opentuteplus' ), __( '1 Comment', 'opentuteplus' ), __( '% Comments', 'opentuteplus' ), 'meta-comments-link' );
 		echo '</span>';
 		endif;
 	}
@@ -275,14 +275,14 @@ if ( ! function_exists( 'opentute_entry_date' ) ) :
  */
 function opentute_entry_date() {
 	if ( is_single() ) { 
-		printf('<span class="meta-date"><span class="meta-date-prep">' . __( 'Published on', 'opentute' ) . '</span> %1$s',
+		printf('<span class="meta-date"><span class="meta-date-prep">' . __( 'Published on', 'opentuteplus' ) . '</span> %1$s',
 			sprintf( '<time datetime="%1$s">%2$s</time></span> ',
 				esc_attr( get_the_date( 'c' ) ),
 				get_the_date()
 				)
 			);
 	} else {
-		printf('<span class="meta-date"><span class="meta-date-prep">' . __( '', 'opentute' ) . '</span> %1$s',
+		printf('<span class="meta-date"><span class="meta-date-prep">' . __( '', 'opentuteplus' ) . '</span> %1$s',
 			sprintf( '<a href="%1$s" rel="bookmark"><time datetime="%2$s">%3$s</time></a></span> ',
 				get_permalink(),
 				esc_attr( get_the_date( 'c' ) ),
@@ -301,7 +301,7 @@ function opentute_entry_format() {
 	$format = get_post_format();
 	if ( current_theme_supports( 'post-formats', $format ) ) {
 		printf( '<span class="meta-format">%1$s<a href="%2$s">%3$s</a></span>',
-			sprintf( '<span class="meta-format-prep">%s </span>', __( 'Format', 'opentute' ) ),
+			sprintf( '<span class="meta-format-prep">%s </span>', __( 'Format', 'opentuteplus' ) ),
 			esc_url( get_post_format_link( $format ) ),
 			get_post_format_string( $format )
 			);
@@ -317,7 +317,7 @@ function opentute_entry_tags() {
 	$tags_list = get_the_tag_list( '', ', ' );
 	if ( $tags_list ) {
 		printf( '<span class="meta-tags"><span class="meta-tags-prep">%1$s </span>%2$s</span>',
-			__( 'Tags', 'opentute' ),
+			__( 'Tags', 'opentuteplus' ),
 			$tags_list
 			);
 	}
@@ -332,10 +332,10 @@ function opentute_post_navigation() {
 	if ( is_attachment() && wp_attachment_is_image() ) : ?>
 
 	<nav class="navigation image-navigation" role="navigation">
-		<h2 class="screen-reader-text sr-only"><?php _e( 'Navigation', 'opentute' ); ?></h2>
+		<h2 class="screen-reader-text sr-only"><?php _e( 'Navigation', 'opentuteplus' ); ?></h2>
 		<div class="nav-links">
-			<div class="nav-previous"><?php previous_image_link( false, __( 'Previous', 'opentute' ) ); ?></div>
-			<div class="nav-next"><?php next_image_link( false, __( 'Next', 'opentute' ) ); ?></div>
+			<div class="nav-previous"><?php previous_image_link( false, __( 'Previous', 'opentuteplus' ) ); ?></div>
+			<div class="nav-next"><?php next_image_link( false, __( 'Next', 'opentuteplus' ) ); ?></div>
 		</div><!-- .nav-links -->
 	</nav><!-- .image-navigation -->
 	
@@ -343,17 +343,17 @@ function opentute_post_navigation() {
 	elseif ( is_attachment() ) :
 		
 		the_post_navigation( array(
-			'prev_text' => '<span class="meta-nav">' . __( 'Published in', 'opentute' ) . '</span> <span class="post-title">%title</span>',
+			'prev_text' => '<span class="meta-nav">' . __( 'Published in', 'opentuteplus' ) . '</span> <span class="post-title">%title</span>',
 			) );
 	
 	elseif ( is_single() ) :
 		
 		the_post_navigation( array(
-			'next_text' => '<span class="meta-nav" aria-hidden="true">' . __( 'Next', 'opentute' ) . '</span> ' .
-			'<span class="screen-reader-text sr-only">' . __( 'Next post:', 'opentute' ) . '</span> ' .
+			'next_text' => '<span class="meta-nav" aria-hidden="true">' . __( 'Next', 'opentuteplus' ) . '</span> ' .
+			'<span class="screen-reader-text sr-only">' . __( 'Next post:', 'opentuteplus' ) . '</span> ' .
 			'<span class="post-title">%title</span>',
-			'prev_text' => '<span class="meta-nav" aria-hidden="true">' . __( 'Previous', 'opentute' ) . '</span> ' .
-			'<span class="screen-reader-text sr-only">' . __( 'Previous post:', 'opentute' ) . '</span> ' .
+			'prev_text' => '<span class="meta-nav" aria-hidden="true">' . __( 'Previous', 'opentuteplus' ) . '</span> ' .
+			'<span class="screen-reader-text sr-only">' . __( 'Previous post:', 'opentuteplus' ) . '</span> ' .
 			'<span class="post-title">%title</span>',
 			) ); 
 	
@@ -374,14 +374,14 @@ function opentute_post_thumbnail() {
 		?>
 
 	<div class="post-thumbnail">
-		<?php the_post_thumbnail( 'opentute-large' ); ?>
+		<?php the_post_thumbnail( 'opentuteplus-large' ); ?>
 	</div><!-- .post-thumbnail -->
 
 <?php else : ?>
 
 	<a href="<?php the_permalink(); ?>" class="post-thumbnail" title="<?php the_title_attribute(); ?>" rel="bookmark" aria-hidden="true">
 		<?php
-		the_post_thumbnail( 'opentute-large', array( 'alt' => get_the_title() ) );
+		the_post_thumbnail( 'opentuteplus-large', array( 'alt' => get_the_title() ) );
 		?>
 	</a>
 
@@ -403,9 +403,9 @@ function opentute_posts_pagination() {
 		// pagination arguments
 		// @link https://developer.wordpress.org/themes/functionality/pagination/#numerical-pagination
 		the_posts_pagination( array(
-			'prev_text'          => __( '&#x2190;', 'opentute' ),
-			'next_text'          => __( '&#x2192;', 'opentute' ),
-			'before_page_number' => '<span class="meta-nav screen-reader-text sr-only">' . __( 'Page', 'opentute' ) . ' </span>',
+			'prev_text'          => __( '&#x2190;', 'opentuteplus' ),
+			'next_text'          => __( '&#x2192;', 'opentuteplus' ),
+			'before_page_number' => '<span class="meta-nav screen-reader-text sr-only">' . __( 'Page', 'opentuteplus' ) . ' </span>',
 			) );
 	}
 	

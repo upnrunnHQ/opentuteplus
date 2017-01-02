@@ -30,7 +30,7 @@ $image_bg.= 'background-position: center center;';
 		<section class="container">
 			<div class="row">		
 				<div class="col-md-12">
-					<h1 class="page-title"><?php printf( __( 'Search results for: %s', 'opentute' ), get_search_query() ); ?></h1>
+					<h1 class="page-title"><?php printf( __( 'Search results for: %s', 'opentuteplus' ), get_search_query() ); ?></h1>
 				</div>
 			</div>
 		</section>		

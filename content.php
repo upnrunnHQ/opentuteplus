@@ -27,7 +27,7 @@
 		<?php
 			the_content();
 			wp_link_pages( array( 
-				'before' => '<div class="page-links"><span class="page-links-prep">' . __( 'Pages:', 'opentute' ) . '</span>',
+				'before' => '<div class="page-links"><span class="page-links-prep">' . __( 'Pages:', 'opentuteplus' ) . '</span>',
 				'after' => '</div>',
 				'link_before' => '<span class="page-numbers">',
 				'link_after'  => '</span>'

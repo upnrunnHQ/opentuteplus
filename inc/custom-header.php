@@ -39,67 +39,67 @@ function opentute_custom_header_setup() {
 		'black' => array(
 			'url'           => '%s/images/headers/black.png',
 			'thumbnail_url' => '%s/images/headers/black-thumbnail.png',
-			'description'   => _x( 'Black', 'header image description', 'opentute' )
+			'description'   => _x( 'Black', 'header image description', 'opentuteplus' )
 		),
 		'blue' => array(
 			'url'           => '%s/images/headers/blue.png',
 			'thumbnail_url' => '%s/images/headers/blue-thumbnail.png',
-			'description'   => _x( 'Blue', 'header image description', 'opentute' )
+			'description'   => _x( 'Blue', 'header image description', 'opentuteplus' )
 		),
 		'brown' => array(
 			'url'           => '%s/images/headers/brown.png',
 			'thumbnail_url' => '%s/images/headers/brown-thumbnail.png',
-			'description'   => _x( 'Brown', 'header image description', 'opentute' )
+			'description'   => _x( 'Brown', 'header image description', 'opentuteplus' )
 		),
 		'gray' => array(
 			'url'           => '%s/images/headers/gray.png',
 			'thumbnail_url' => '%s/images/headers/gray-thumbnail.png',
-			'description'   => _x( 'Gray', 'header image description', 'opentute' )
+			'description'   => _x( 'Gray', 'header image description', 'opentuteplus' )
 		),
 		'green' => array(
 			'url'           => '%s/images/headers/green.png',
 			'thumbnail_url' => '%s/images/headers/green-thumbnail.png',
-			'description'   => _x( 'Green', 'header image description', 'opentute' )
+			'description'   => _x( 'Green', 'header image description', 'opentuteplus' )
 		),
 		'orange' => array(
 			'url'           => '%s/images/headers/orange.png',
 			'thumbnail_url' => '%s/images/headers/orange-thumbnail.png',
-			'description'   => _x( 'Orange', 'header image description', 'opentute' )
+			'description'   => _x( 'Orange', 'header image description', 'opentuteplus' )
 		),
 		'pink' => array(
 			'url'           => '%s/images/headers/pink.png',
 			'thumbnail_url' => '%s/images/headers/pink-thumbnail.png',
-			'description'   => _x( 'Pink', 'header image description', 'opentute' )
+			'description'   => _x( 'Pink', 'header image description', 'opentuteplus' )
 		),
 		'purple' => array(
 			'url'           => '%s/images/headers/purple.png',
 			'thumbnail_url' => '%s/images/headers/purple-thumbnail.png',
-			'description'   => _x( 'Purple', 'header image description', 'opentute' )
+			'description'   => _x( 'Purple', 'header image description', 'opentuteplus' )
 		),
 		'red' => array(
 			'url'           => '%s/images/headers/red.png',
 			'thumbnail_url' => '%s/images/headers/red-thumbnail.png',
-			'description'   => _x( 'Red', 'header image description', 'opentute' )
+			'description'   => _x( 'Red', 'header image description', 'opentuteplus' )
 		),
 		'silver' => array(
 			'url'           => '%s/images/headers/silver.png',
 			'thumbnail_url' => '%s/images/headers/silver-thumbnail.png',
-			'description'   => _x( 'Silver', 'header image description', 'opentute' )
+			'description'   => _x( 'Silver', 'header image description', 'opentuteplus' )
 		),
 		'tan' => array(
 			'url'           => '%s/images/headers/tan.png',
 			'thumbnail_url' => '%s/images/headers/tan-thumbnail.png',
-			'description'   => _x( 'Tan', 'header image description', 'opentute' )
+			'description'   => _x( 'Tan', 'header image description', 'opentuteplus' )
 		),
 		'white' => array(
 			'url'           => '%s/images/headers/white.png',
 			'thumbnail_url' => '%s/images/headers/white-thumbnail.png',
-			'description'   => _x( 'White', 'header image description', 'opentute' )
+			'description'   => _x( 'White', 'header image description', 'opentuteplus' )
 		),
 		'yellow' => array(
 			'url'           => '%s/images/headers/yellow.png',
 			'thumbnail_url' => '%s/images/headers/yellow-thumbnail.png',
-			'description'   => _x( 'Yellow', 'header image description', 'opentute' )
+			'description'   => _x( 'Yellow', 'header image description', 'opentuteplus' )
 		),
 	) );
 }
@@ -118,7 +118,7 @@ function opentute_header_style() {
 	if ( empty( $header_image ) && $header_textcolor == get_theme_support( 'custom-header', 'default-text-color' ) )
 		return;
 	?>
-	<style type="text/css" id="opentute-header-style">
+	<style type="text/css" id="opentuteplus-header-style">
 	<?php
 		// If custom header is set.
 		if ( ! empty( $header_image ) ) :

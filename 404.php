@@ -26,11 +26,11 @@ get_header(); ?>
 				
 				<section class="error-404 not-found">
 					<header class="page-header">
-						<h1 class="page-title"><?php _e( "Oops! That page can't be found.", 'opentute' ); ?></h1>
+						<h1 class="page-title"><?php _e( "Oops! That page can't be found.", 'opentuteplus' ); ?></h1>
 					</header><!-- .page-header -->
 					
 					<div class="page-content">
-						<p><?php _e( 'It looks like nothing was found at this location. Maybe try search?', 'opentute' ); ?></p>
+						<p><?php _e( 'It looks like nothing was found at this location. Maybe try search?', 'opentuteplus' ); ?></p>
 						
 						<?php get_template_part('searchform') ?>
 

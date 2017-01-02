@@ -18,7 +18,7 @@ function opentute_site_layout_add_meta_box() {
 	foreach ( $post_types as $post_type ) {
 		add_meta_box( 
 			'opentute_site_layout', 
-			__( 'Site layout', 'opentute' ), 
+			__( 'Site layout', 'opentuteplus' ), 
 			'opentute_site_layout_callback', 
 			$post_type, 
 			'side', 
@@ -42,7 +42,7 @@ function opentute_site_layout_callback() {
 	?>
 	<p>
 		<label><input type="radio" name="_opentute_site_layout" <?php checked( 'default' == $site_layout ); ?> value="default" />
-		<?php esc_html_e( 'Default', 'opentute' ); ?></label><br />
+		<?php esc_html_e( 'Default', 'opentuteplus' ); ?></label><br />
 		<?php foreach( $valid_site_layouts as $slug => $name ) { ?>
 			<label><input type="radio" name="_opentute_site_layout" <?php checked( $slug == $site_layout ); ?> value="<?php echo esc_attr( $slug ); ?>" />
 			<?php echo esc_html( $name ); ?></label><br />
@@ -95,8 +95,8 @@ add_action( 'future_page', 'opentute_site_layout_save_meta_box_data' );
  */
 function opentute_valid_site_layouts() {
 	$site_layouts = array(
-		'layout-boxed' => __( 'Boxed', 'opentute' ),
-		'layout-wide' 	=> __( 'Wide', 'opentute' )
+		'layout-boxed' => __( 'Boxed', 'opentuteplus' ),
+		'layout-wide' 	=> __( 'Wide', 'opentuteplus' )
 	);
 
 	return apply_filters( 'opentute_valid_site_layouts', $site_layouts );

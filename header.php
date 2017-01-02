@@ -31,7 +31,7 @@
 <body <?php body_class(); ?>>
 
 <div id="wrapper">
-	<a class="skip-link screen-reader-text sr-only" href="#content" title="<?php esc_attr_e( 'Skip to content', 'opentute' ); ?>"><?php _e( 'Skip to content', 'opentute' ); ?></a>
+	<a class="skip-link screen-reader-text sr-only" href="#content" title="<?php esc_attr_e( 'Skip to content', 'opentuteplus' ); ?>"><?php _e( 'Skip to content', 'opentuteplus' ); ?></a>
 		
 	<?php do_action( 'opentute_header_before' ); ?>
 	
@@ -96,7 +96,7 @@
 					if ( has_nav_menu( 'site-navigation' ) ) : ?>
 					<input type="checkbox" id="navbar-navigation-toggle" />
 					<label for="navbar-navigation-toggle" class="navigation-toggle">
-						<span class="screen-reader-text sr-only"><?php _e( 'Navigation', 'opentute' ); ?></span>
+						<span class="screen-reader-text sr-only"><?php _e( 'Navigation', 'opentuteplus' ); ?></span>
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>

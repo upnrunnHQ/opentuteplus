@@ -18,7 +18,7 @@ function opentute_post_layout_add_meta_box() {
 	foreach ( $post_types as $post_type ) {
 		add_meta_box( 
 			'opentute_post_layout', 
-			__( 'Post layout', 'opentute' ), 
+			__( 'Post layout', 'opentuteplus' ), 
 			'opentute_post_layout_callback', 
 			$post_type, 
 			'side', 
@@ -42,7 +42,7 @@ function opentute_post_layout_callback() {
 	?>
 	<p>
 		<label><input type="radio" name="_opentute_post_layout" <?php checked( 'default' == $post_layout ); ?> value="default" />
-		<?php esc_html_e( 'Default', 'opentute' ); ?></label><br />
+		<?php esc_html_e( 'Default', 'opentuteplus' ); ?></label><br />
 		<?php foreach( $valid_post_layouts as $slug => $name ) { ?>
 			<label><input type="radio" name="_opentute_post_layout" <?php checked( $slug == $post_layout ); ?> value="<?php echo esc_attr( $slug ); ?>" />
 			<?php echo esc_html( $name ); ?></label><br />
@@ -95,9 +95,9 @@ add_action( 'future_page', 'opentute_post_layout_save_meta_box_data' );
  */
 function opentute_valid_post_layouts() {
 	$post_layouts = array(
-		'one-column'			=> __( 'One column', 'opentute' ),
-		'two-columns-right-sidebar'	=> __( 'Two columns, right sidebar', 'opentute' ),
-		'two-columns-left-sidebar'	=> __( 'Two columns, left sidebar', 'opentute' )
+		'one-column'			=> __( 'One column', 'opentuteplus' ),
+		'two-columns-right-sidebar'	=> __( 'Two columns, right sidebar', 'opentuteplus' ),
+		'two-columns-left-sidebar'	=> __( 'Two columns, left sidebar', 'opentuteplus' )
 	);
 
 	return apply_filters( 'opentute_valid_post_layouts', $post_layouts );

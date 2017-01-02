@@ -18,7 +18,7 @@ function opentute_customize_register( $wp_customize ) {
 	 * Header logo
 	 */
 	$wp_customize->add_section( 'opentute_addontag_header_logo', array(
-		'title'			=> esc_html__( 'Header Logo', 'opentute' ),
+		'title'			=> esc_html__( 'Header Logo', 'opentuteplus' ),
 		'priority'		=> 50,
 		'description'   => 'This will replace the header text/title.',
 	) );
@@ -33,7 +33,7 @@ function opentute_customize_register( $wp_customize ) {
 		$wp_customize, 
 		'opentute_addontag_header_logo_image', 
 		array(
-			'label'      => __( 'Header Logo', 'opentute' ),
+			'label'      => __( 'Header Logo', 'opentuteplus' ),
 			'section'    => 'opentute_addontag_header_logo',
 			'settings'   => 'opentute_addontag_header_logo_image',
 		) ) 
@@ -44,13 +44,13 @@ function opentute_customize_register( $wp_customize ) {
 	 * Featured Post
 	 */
 	$wp_customize->add_section( 'opentute_addontag_featured_post', array(
-		'title'			=> esc_html__( 'Featured Post', 'opentute' ),
+		'title'			=> esc_html__( 'Featured Post', 'opentuteplus' ),
 		'priority'		=> 40,
 		'description'   => 'Featured post on the blog.',
 	) );
 	
     // select post
-    $select_posts = array('' => esc_html__( 'Dont use featured post', 'opentute' ));
+    $select_posts = array('' => esc_html__( 'Dont use featured post', 'opentuteplus' ));
     $array_posts = get_posts(
     	array(
     		'post_type'=> 'post', 
@@ -70,8 +70,8 @@ function opentute_customize_register( $wp_customize ) {
 		'opentute_addontag_featured_post_select',
 		array(
 			'type' => 'select',
-			'label' => esc_html__( 'Featured Post', 'opentute' ),
-			'description' => esc_html__( 'The post to use as featured post.', 'opentute' ),
+			'label' => esc_html__( 'Featured Post', 'opentuteplus' ),
+			'description' => esc_html__( 'The post to use as featured post.', 'opentuteplus' ),
 			'section' => 'opentute_addontag_featured_post',
 			'choices' => $select_posts
 		)
@@ -87,8 +87,8 @@ function opentute_customize_register( $wp_customize ) {
 		$wp_customize, 
 		'opentute_addontag_featured_post_default_image', 
 		array(
-			'label' => __( 'Default Background', 'opentute' ),
-			'description' => __( 'Use this image as featured post background if selected post featured image is not available.', 'opentute' ),
+			'label' => __( 'Default Background', 'opentuteplus' ),
+			'description' => __( 'Use this image as featured post background if selected post featured image is not available.', 'opentuteplus' ),
 			'section' => 'opentute_addontag_featured_post',
 			'settings' => 'opentute_addontag_featured_post_default_image',
 		) ) 
@@ -108,8 +108,8 @@ function opentute_customize_register( $wp_customize ) {
 		$wp_customize, 
 		'opentute_addontag_single_post_default_image', 
 		array(
-			'label' => __( 'Single Post Title Background', 'opentute' ),
-			'description' => __( 'Use this image as title post background if selected post featured image is not available.', 'opentute' ),
+			'label' => __( 'Single Post Title Background', 'opentuteplus' ),
+			'description' => __( 'Use this image as title post background if selected post featured image is not available.', 'opentuteplus' ),
 			'section' => 'background_image',
 			'settings' => 'opentute_addontag_single_post_default_image',
 		) ) 
@@ -125,8 +125,8 @@ function opentute_customize_register( $wp_customize ) {
 		$wp_customize, 
 		'opentute_addontag_archive_image', 
 		array(
-			'label' => __( 'Archive Title Background', 'opentute' ),
-			'description' => __( 'Background image for archive (posts by author, category or tag) and search result header title.', 'opentute' ),
+			'label' => __( 'Archive Title Background', 'opentuteplus' ),
+			'description' => __( 'Background image for archive (posts by author, category or tag) and search result header title.', 'opentuteplus' ),
 			'section' => 'background_image',
 			'settings' => 'opentute_addontag_archive_image',
 		) ) 
@@ -137,7 +137,7 @@ function opentute_customize_register( $wp_customize ) {
 	 * Google Font
 	 */
 	$wp_customize->add_section( 'opentute_google_font', array(
-		'title'			=> esc_html__( 'Google Font', 'opentute' ),
+		'title'			=> esc_html__( 'Google Font', 'opentuteplus' ),
 		'priority'		=> 130,
 		'description'   => 'Integrate the fonts into your CSS. All you need to do is add the font name to your CSS styles. For example: "font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif; If You want to add more than one font just separate them with pipe "|", for example: "Open Sans:400|Inconsolata:400,700". Default subset is "latin,latin-ext"',
 	) );
@@ -148,7 +148,7 @@ function opentute_customize_register( $wp_customize ) {
     ) );
 	
    $wp_customize->add_control( 'opentute_google_font_family', array(
-		'label'		=> esc_html__( 'Google Font family', 'opentute' ),
+		'label'		=> esc_html__( 'Google Font family', 'opentuteplus' ),
         'section' => 'opentute_google_font',
         'type'    => 'text',
     ) );
@@ -159,7 +159,7 @@ function opentute_customize_register( $wp_customize ) {
     ) );
 	
     $wp_customize->add_control( 'opentute_google_font_subset', array(
-		'label'	  => esc_html__( 'Google Font subset', 'opentute' ),
+		'label'	  => esc_html__( 'Google Font subset', 'opentuteplus' ),
         'section' => 'opentute_google_font',
         'type'    => 'text',
     ) );
@@ -169,7 +169,7 @@ function opentute_customize_register( $wp_customize ) {
 	 * Layout
 	 */
 	$wp_customize->add_section( 'opentute_layout', array(
-		'title'			=> esc_html__( 'Layout', 'opentute' ),
+		'title'			=> esc_html__( 'Layout', 'opentuteplus' ),
 		'priority'		=> 140,
 	) );
 	
@@ -183,11 +183,11 @@ function opentute_customize_register( $wp_customize ) {
 		'opentute_site_layout',
 		array(
 			'type' => 'radio',
-			'label' => esc_html__( 'Site layout', 'opentute' ),
+			'label' => esc_html__( 'Site layout', 'opentuteplus' ),
 			'section' => 'opentute_layout',
 			'choices' => array(
-				'layout-boxed' => esc_html__( 'Boxed', 'opentute' ),
-				'layout-wide'  => esc_html__( 'Wide', 'opentute' ),
+				'layout-boxed' => esc_html__( 'Boxed', 'opentuteplus' ),
+				'layout-wide'  => esc_html__( 'Wide', 'opentuteplus' ),
 			),
 		)
 	);	
@@ -202,12 +202,12 @@ function opentute_customize_register( $wp_customize ) {
 		'opentute_post_layout',
 		array(
 			'type' => 'radio',
-			'label' => esc_html__( 'Post layout', 'opentute' ),
+			'label' => esc_html__( 'Post layout', 'opentuteplus' ),
 			'section' => 'opentute_layout',
 			'choices' => array(
-				'one-column' => esc_html__( 'One column', 'opentute' ),
-				'two-columns-right-sidebar' => esc_html__( 'Two columns, right sidebar', 'opentute' ),
-				'two-columns-left-sidebar'=> esc_html__( 'Two columns, left sidebar', 'opentute' ),
+				'one-column' => esc_html__( 'One column', 'opentuteplus' ),
+				'two-columns-right-sidebar' => esc_html__( 'Two columns, right sidebar', 'opentuteplus' ),
+				'two-columns-left-sidebar'=> esc_html__( 'Two columns, left sidebar', 'opentuteplus' ),
 			),
 		)
 	);
@@ -272,7 +272,7 @@ endif; // opentute_customizer_google_fonts_url
  * Enqueue Google Font style.
  */
 function opentute_enqueue_style_google_font_url() {
-    wp_enqueue_style( 'opentute-google-font', opentute_customizer_google_fonts_url(), array(), null );
+    wp_enqueue_style( 'opentuteplus-google-font', opentute_customizer_google_fonts_url(), array(), null );
 }
 add_action( 'wp_enqueue_scripts', 'opentute_enqueue_style_google_font_url' );
 
@@ -288,6 +288,6 @@ add_action( 'after_setup_theme', 'opentute_add_editor_style_customizer_google_fo
  * Adding Google font to the Custom Header screen.
  */
 function opentute_enqueue_style_google_font_custom_header() {
-    wp_enqueue_style( 'opentute-google-font', opentute_customizer_google_fonts_url(), array(), null );
+    wp_enqueue_style( 'opentuteplus-google-font', opentute_customizer_google_fonts_url(), array(), null );
 }
 add_action( 'admin_print_styles-appearance_page_custom-header', 'opentute_enqueue_style_google_font_custom_header' );

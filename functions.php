@@ -43,19 +43,19 @@ function opentute_setup() {
 	add_theme_support( 'post-thumbnails' );
 	// set default post thumbnails: 150 pixels wide by 150 pixels tall, crop mode
 	set_post_thumbnail_size( 150, 150, true );
-	// declare 'opentute-large' size
-	add_image_size( 'opentute-large', 780, 400, true );
+	// declare 'opentuteplus-large' size
+	add_image_size( 'opentuteplus-large', 780, 400, true );
 	
 	// Let WordPress manage the document title.
 	add_theme_support( 'title-tag' );
 	
 	// Makes OpenTute+ available for translation.
-	load_theme_textdomain( 'opentute', get_template_directory() . '/languages' );
+	load_theme_textdomain( 'opentuteplus', get_template_directory() . '/languages' );
 	
 	// Add support for a navigation menu.
 	register_nav_menus( array(
-		'site-navigation' 	=> __( 'Header Navigation', 'opentute' ),
-		'footer-navigation' 	=> __( 'Footer Navigation', 'opentute' )
+		'site-navigation' 	=> __( 'Header Navigation', 'opentuteplus' ),
+		'footer-navigation' 	=> __( 'Footer Navigation', 'opentuteplus' )
 	) );
 	
 	// Set the content width.
@@ -72,7 +72,7 @@ add_action( 'after_setup_theme', 'opentute_setup' );
  */
 function opentute_enqueue_scripts_and_styles() {
 	// Load main stylesheet.
-	wp_enqueue_style( 'opentute-style', get_stylesheet_uri(), array( 'bootstrap' ), '0.9.7', 'all' );
+	wp_enqueue_style( 'opentuteplus-style', get_stylesheet_uri(), array( 'bootstrap' ), '0.9.7', 'all' );
 	
 	/**
 	 * Enqueue Respond script.
@@ -88,7 +88,7 @@ function opentute_enqueue_scripts_and_styles() {
 		wp_enqueue_script( 'comment-reply' );
 	}
 	
-	wp_enqueue_script( 'opentute-script', get_template_directory_uri() . '/js/functions.js', array( 'jquery' ), '0.9.7', true );
+	wp_enqueue_script( 'opentuteplus-script', get_template_directory_uri() . '/js/functions.js', array( 'jquery' ), '0.9.7', true );
 }
 add_action( 'wp_enqueue_scripts', 'opentute_enqueue_scripts_and_styles' );
 
@@ -109,9 +109,9 @@ endif; // opentute_render_title
 function opentute_widgets_init() {
 	// Sidebar
 	register_sidebar( array(
-		'name' 			=> __( 'Sidebar', 'opentute' ),
+		'name' 			=> __( 'Sidebar', 'opentuteplus' ),
 		'id' 			=> 'sidebar-1',
-		'description' 	=> __( 'Sidebar Widgets', 'opentute' ),
+		'description' 	=> __( 'Sidebar Widgets', 'opentuteplus' ),
 		'before_widget' => '<aside id="%1$s" class="widget-container %2$s">',
 		'after_widget' 	=> '</aside>',
 		'before_title' 	=> '<h3 class="widget-title">',

@@ -19,7 +19,7 @@
 	<?php 
 	// If the current post is protected by a password.
 	if ( post_password_required() ) : ?>
-	<p class="no-password"><?php _e( 'Protected Comments: Please enter your password to view comments.', 'opentute' ); ?></p>
+	<p class="no-password"><?php _e( 'Protected Comments: Please enter your password to view comments.', 'opentuteplus' ); ?></p>
 </div><!-- .comments-area -->
 <?php 
 return; 
@@ -28,7 +28,7 @@ endif; ?>
 <?php if ( have_comments() ) : ?>
 	<h3 id="comments-title">
 		<?php 
-			printf( _n( 'One Comment', '%1$s Comments', get_comments_number(), 'opentute' ), 
+			printf( _n( 'One Comment', '%1$s Comments', get_comments_number(), 'opentuteplus' ), 
 				number_format_i18n( get_comments_number())); 
 		?>
 	</h3>
@@ -51,7 +51,7 @@ endif; ?>
 		if ( ! comments_open() && get_comments_number() && post_type_supports( get_post_type(), 'comments' ) ) :
 	?>
 		
-		<p class="no-comments"><?php _e( 'Comments are closed.', 'opentute' ); ?></p>
+		<p class="no-comments"><?php _e( 'Comments are closed.', 'opentuteplus' ); ?></p>
 	
 	<?php endif; // end comments_open() ?>
 
@@ -60,7 +60,7 @@ endif; ?>
 	<?php 
 	$comments_args = array(
 		// redefine your own textarea (the comment body)
-		'comment_field' => '<p class="comment-form-comment"><label for="comment">' . __( 'Comment', 'opentute' ) . ' <span class="required">*</span></label><textarea id="comment" name="comment" cols="45" rows="8" aria-required="true"></textarea></p>',
+		'comment_field' => '<p class="comment-form-comment"><label for="comment">' . __( 'Comment', 'opentuteplus' ) . ' <span class="required">*</span></label><textarea id="comment" name="comment" cols="45" rows="8" aria-required="true"></textarea></p>',
 	);
 	comment_form($comments_args); ?>
 	

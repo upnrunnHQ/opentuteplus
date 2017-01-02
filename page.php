@@ -55,11 +55,11 @@ get_header(); ?>
 					<div class="entry-content">
 					<?php 
 						the_content();
-						wp_link_pages( array( 'before' => '<div class="page-links"><span class="page-links-prep">' . __( 'Pages:', 'opentute' ) . '</span>', 'after' => '</div>', 'link_before' => '<span class="page-numbers">', 'link_after'  => '</span>' ) );
+						wp_link_pages( array( 'before' => '<div class="page-links"><span class="page-links-prep">' . __( 'Pages:', 'opentuteplus' ) . '</span>', 'after' => '</div>', 'link_before' => '<span class="page-numbers">', 'link_after'  => '</span>' ) );
 					?>
 					</div><!-- .entry-content -->
 					
-					<?php edit_post_link( __( 'Edit', 'opentute' ) . ' <span class="screen-reader-text sr-only">' . get_the_title() . '</span>', '<footer class="entry-footer"><span class="edit-link">', '</span></footer><!-- .entry-footer -->' ); ?>
+					<?php edit_post_link( __( 'Edit', 'opentuteplus' ) . ' <span class="screen-reader-text sr-only">' . get_the_title() . '</span>', '<footer class="entry-footer"><span class="edit-link">', '</span></footer><!-- .entry-footer -->' ); ?>
 
 				</article><!-- #post-## -->
 				

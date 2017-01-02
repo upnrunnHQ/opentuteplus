@@ -27,13 +27,13 @@ function opentute_post_meta_callback( $post )
     ?>
 
     <style type="text/css">
-        .opentute-metabox textarea {
+        .opentuteplus-metabox textarea {
             height: 4em;
             width: 100%;
             margin-top: 8px;
         }
 
-        .opentute-metabox label {
+        .opentuteplus-metabox label {
             font-size: 13px;
             line-height: 1.5;
             margin: 10px 0 0;
@@ -41,7 +41,7 @@ function opentute_post_meta_callback( $post )
         }
     </style>
 
-    <div class="opentute-metabox">
+    <div class="opentuteplus-metabox">
         <textarea name="post_subtitle"><?php echo $post_subtitle ?></textarea>
         <label>Optional subtitle that appears in single post or page under the title.</label>
     </div>

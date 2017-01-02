@@ -59,7 +59,7 @@ function opentute_addontag_entry_author($string = ' by ', $userID = false)
 		printf( '<span class="meta-author"><span class="author vcard"><span class="meta-author-prep">%1$s </span><a href="%2$s" class="url fn n" title="%3$s">%4$s</a></span></span>',
 			$string,
 			esc_url( get_author_posts_url($userID) ),
-			sprintf( esc_attr__( 'View all posts by %s', 'opentute' ), $author ),
+			sprintf( esc_attr__( 'View all posts by %s', 'opentuteplus' ), $author ),
 			$author
 		);
 	}
@@ -107,7 +107,7 @@ function opentute_addontag_entry_categories() {
 	$categories_list = get_the_category_list( ' ' );
 	if ( $categories_list ) {
 		printf( '<span class="meta-categories"><span class="meta-categories-prep">%1$s </span>%2$s</span>',
-			__( 'Categories', 'opentute' ),
+			__( 'Categories', 'opentuteplus' ),
 			$categories_list
 		);
 	}
@@ -122,7 +122,7 @@ function opentute_addontag_entry_tags() {
 	$tags_list = get_the_tag_list( '', ' ' );
 	if ( $tags_list ) {
 		printf( '<span class="meta-tags"><span class="meta-tags-prep">%1$s </span>%2$s</span>',
-			__( 'Tags', 'opentute' ),
+			__( 'Tags', 'opentuteplus' ),
 			$tags_list
 		);
 	}
@@ -151,7 +151,7 @@ function opentute_addontag_entry_author_info() {
 				<p class="author-bio">
 					<?php the_author_meta( 'description' ); ?>
 					<a href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>" class="author-link" rel="author">
-						<?php printf( __( 'View all posts by %s', 'opentute' ), get_the_author() ); ?>
+						<?php printf( __( 'View all posts by %s', 'opentuteplus' ), get_the_author() ); ?>
 					</a>
 				</p>
 			</div><!-- .author-description -->

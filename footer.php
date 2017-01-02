@@ -58,7 +58,7 @@
 			<div class="row">
 				<div class="col-md-5">
 					<div class="textwidget">
-					<p>&copy; <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="site-info" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>"><?php bloginfo( 'name' ); ?></a>. <a href="<?php echo esc_url( __( 'https://wordpress.org/', 'opentute' ) ); ?>" class="site-generator" title="<?php esc_attr_e( 'Powered by WordPress', 'opentute' ); ?>"><?php esc_attr_e( 'Powered by WordPress', 'opentute' ); ?></a> &amp; <a href="<?php echo esc_url( 'http://opentuteplus.com/' ); ?>" class="site-webdesign" title="OpenTute+ Theme">OpenTute+ Theme</a>.</p>	
+					<p>&copy; <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="site-info" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>"><?php bloginfo( 'name' ); ?></a>. <a href="<?php echo esc_url( __( 'https://wordpress.org/', 'opentuteplus' ) ); ?>" class="site-generator" title="<?php esc_attr_e( 'Powered by WordPress', 'opentuteplus' ); ?>"><?php esc_attr_e( 'Powered by WordPress', 'opentuteplus' ); ?></a> &amp; <a href="<?php echo esc_url( 'http://opentuteplus.com/' ); ?>" class="site-webdesign" title="OpenTute+ Theme">OpenTute+ Theme</a>.</p>	
 
 					</div>
 				</div>
